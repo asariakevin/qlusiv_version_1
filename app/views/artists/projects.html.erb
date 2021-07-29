@@ -1,0 +1,5 @@
+<% @projects.each do |project| %>
+  <p> <%= project.title %> </p>
+  <p> Support: <%= project.support%>Ksh </p>
+  <%= link_to "Support" , artist_support_path(@artist , fan_id: @fan.id, project_id: project.id)%>
+<% end %>

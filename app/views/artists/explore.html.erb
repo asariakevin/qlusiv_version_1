@@ -1,0 +1,16 @@
+<%if @fan %>
+  <p> there is a fan </p>
+<ul>
+  <% @artists.each do |artist| %>
+    <%= link_to "#{artist.name}" , artist_profile_path(id: artist.id,fan_id: @fan.id) %> <br>
+  <% end %>
+</ul>
+
+<%else%>
+
+<ul>
+  <% @artists.each do |artist| %>
+    <%= link_to "#{artist.name}" , artist %> <br>
+  <% end %>
+</ul>
+<%end%>

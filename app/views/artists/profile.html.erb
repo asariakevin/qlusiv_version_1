@@ -1,0 +1,14 @@
+<img src=<%= @profile.image_url%>
+<p> <%= @profile.name %> </p>
+<p> <%= @profile.bio %> </p>
+<p> <%= @profile.city %> </p>
+<%= link_to "Subscribe", artists_subscribe_path(artist_id: @artist.id , fan_id: @fan.id) %>
+
+<h1>Posts </h1>
+
+<% @artist.posts.each do |post| %>
+  <h2> <%= post.caption %> </h2>
+  <img src=<%= post.image_url %> >
+  <p>Likes: <%= post.like %> </p>
+<%end%>
+

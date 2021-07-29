@@ -1,0 +1,8 @@
+<% if @fan %>
+  <p> There is a fan </P
+<p> <%= @artist.name%> </p>
+<%= link_to "Subscribe" , artists_subscribe_path(artist_id: @artist.id , fan_id: @fan.id) %> 
+<%else%>
+<p> <%= @artist.name%> </p>
+<%= link_to "Subscribe" %> 
+<%end%>

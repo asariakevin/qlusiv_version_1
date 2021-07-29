@@ -1,0 +1,6 @@
+<div class="profile-item">
+  <% @profiles.each do |profile| %>
+    <img src=<%=profile.image_url %>>
+    <p> <%= profile.name %> </p>
+  <% end %>
+</div>

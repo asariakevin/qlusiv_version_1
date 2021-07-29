@@ -1,0 +1,9 @@
+<% if @subscribed_artists %>
+  <ul>
+    <% @subscribed_artists.each do |artist| %>
+      <%= link_to artist.name , artist_fan_projects_path(id: artist , fan_id: @fan.id)%>
+      <li> <%= artist.name %> </li>
+    <%end%>
+  </ul>
+<%end%>
+<%= link_to "Add Subscription" , fan_artists_path(@fan)%>
